@@ -12,9 +12,9 @@ public:
 		return m_ipList.size();
 	}
 
-	std::string &operator[](size_t i) const{
+	std::string &operator[](size_t i) {
 		if (i >= size()) {
-			abort(-1);
+			abort();
 		}
 		return m_ipList[i];
 	}

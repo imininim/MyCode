@@ -11,6 +11,11 @@ void IpList::append(const std::string &ip) {
 	m_ipList.push_back(ip);
 }
 void IpList::erase(const std::string &ip) {
-	erase(m_ipList.begin(), m_ipList.end(), ip);
+	for (auto it = m_ipList.begin(); it != m_ipList.end(); ++it) {
+		if (ip == *it) {
+			m_ipList.erase(it);
+			break;
+		}
+	}
 }
 
